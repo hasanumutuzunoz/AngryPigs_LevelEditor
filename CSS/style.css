@@ -1,0 +1,167 @@
+/* Jquery user interface drag and drop */
+#draggable{ width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+#resizable { width: 150px; height: 150px; padding: 0.5em; }
+#resizable h3 { text-align: center; margin: 0; }
+
+html {
+    background-color: #2b2823;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#leftSideBar {
+  background: url('../images/woodTexture.jpg');
+  background-size: 100% 100%;
+}
+.logo {
+  width: 30rem;
+  height: 30rem;
+  background: url('../images/pig.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+#attributes {
+  display: flex;
+  flex-direction: column;
+}
+.inputText {
+	border-radius:34px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:text;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.button {
+  background-color:#5c7ae6;
+	border-radius:34px;
+	border:3px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	font-weight:bold;
+	padding:5px 59px;
+	text-decoration:none;
+	text-shadow:2px 1px 8px #2f6627;
+}
+.button:hover {
+	background-color:#60bd2d;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+
+#editor {
+    display: flex;
+    flex-direction: column;
+    flex-grow:4;
+    background-color: #eeeeee;
+    overflow: hidden;
+    min-width: 128rem;
+    min-height: 96rem;
+    height: 100vh;
+    position: relative;
+    border: 2px solid black;
+
+}
+#topMenu {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    background-color: green;
+    height: 20%;
+}
+#topMenu input {
+    box-shadow: 0 0 0 2px #2b2823 inset;
+    width: 15rem;
+    height: 2rem;
+}
+#topMenu * {
+    align-self: center;
+}
+.block {
+    width: 20rem;
+    height: 20rem;
+    background: url('../images/woodBox.png') no-repeat;
+    background-size: 100% 100%;
+}
+.cannon {
+    width: 20rem;
+    height: 20rem;
+    background: url('../images/cannon.png') no-repeat;
+    background-size: 100% 100%;
+}
+.bird {
+    width: 11rem;
+    height: 10rem;
+    background-image: url("../images/sprite.png");
+    background-size: 400px auto;
+
+    -webkit-animation: play .8s steps(4) infinite;
+    -moz-animation: play .8s steps(4) infinite;
+    -ms-animation: play .8s steps(4) infinite;
+    -o-animation: play .8s steps(4) infinite;
+    animation: play .8s steps(4) infinite;
+}
+.dummyObject {}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently */
+}
+#droppable {
+  height: 100%;
+  width: 100%;
+}
+
+.playBackground {
+  background-image: url("../images/background.gif");
+  background-size: 100% 100%;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    outline: none;
+    cursor: default;
+}
+
+input, select {
+    margin-top: 0.4rem;
+    margin-bottom:2rem;
+    border: none;
+    background-color: #eeeeee;
+}
+
+@keyframes play {
+    from { background-position:    0px; }
+    to { background-position: -400px; }
+}
